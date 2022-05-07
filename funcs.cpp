@@ -1,6 +1,6 @@
 #include <iostream>
 #include "funcs.h"
-
+#include <sstream>
 #include <string>
 
 
@@ -12,9 +12,14 @@ std::string printRange(int left, int right)//recursive function
     if(left>right)
         return " ";
     std::cout<<left<<" ";
+
+ std::stringstream ss;
+ ss << left;
+ ss >> a;
+
     printRange(left + 1, right);
 
-    a += std::to_string(left);
+
 
     return a;
 }
@@ -51,15 +56,15 @@ bool isAlphanumeric(std::string s){
   if (s.size() < 1)
     return true;
 
-  const char *c = s.c_str();
 
-  if (!isalpha(c[0]))
+
+  if (!isalpha(s[s.size()-1]) && !isdigit(s[s.size()-1]))
   {
     return false;
   }
   else
   {
-    return isAlphanumeric(c+1);
+    return isAlphanumeric(s.substr(0, s.size()-1));
   }
 }
 
