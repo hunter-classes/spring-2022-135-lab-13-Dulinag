@@ -39,9 +39,18 @@ CHECK(sumArray(arr, 10) == 43);
 }
 
 
-TEST_CASE("checks bool and its value"){
+TEST_CASE("checks isAlphanumeric"){
 
 
 CHECK(isAlphanumeric("ABCD") == true);
 CHECK(isAlphanumeric("KLMN 8-7-6") == false);
+}
+
+
+TEST_CASE("checks nestedParens"){
+
+
+CHECK(nestedParens("((()))") == true);
+
+CHECK(nestedParens("a(b)c") == false);
 }

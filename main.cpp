@@ -6,17 +6,22 @@
 int main(){
 
 
+std::cout<< "Task A: " << std::endl;
+std::cout<<std::endl;
 printRange(-2, 10);
 
 std::cout<<std::endl;
+std::cout<<std::endl;
+std::cout<< "Task B: " << std::endl;
 std::cout<<std::endl;
 int x = sumRange(1, 3);
   std::cout <<  x << std::endl;   // 6
   std::cout<<std::endl;
   int y = sumRange(-2, 10);
   std::cout <<  y << std::endl; //52
-
-
+  std::cout<<std::endl;
+  std::cout<< "Task C: " << std::endl;
+  std::cout<<std::endl;
   int size = 10;
      int *arr = new int[size]; // allocate array dynamically
      arr[0] = 12;
@@ -38,12 +43,14 @@ int x = sumRange(1, 3);
 
      delete[] arr;         // deallocate it
 std::cout<<std::endl;
-
+std::cout<< "Task D: " << std::endl;
+std::cout<<std::endl;
      std::cout << isAlphanumeric("ABCD") << std::endl;        // true (1)
      std::cout << isAlphanumeric("KLMN 8-7-6") << std::endl;  // false (0)
 
 std::cout<<std::endl;
-
+std::cout<< "Task E: " << std::endl;
+std::cout<<std::endl;
 std::cout << nestedParens("((()))") << std::endl;      // true (1)
 std::cout << nestedParens("()") << std::endl;          // true (1)
 std::cout << nestedParens("") << std::endl;            // true (1)

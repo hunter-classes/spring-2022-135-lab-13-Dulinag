@@ -71,17 +71,15 @@ bool isAlphanumeric(std::string s){
 
 bool nestedParens(std::string s){
 
+  if (s.size() < 1)
+    return true;
 
 
-  const char *c = s.c_str();
-
-    if (c =="()")
+  if ((s[0] != '(') || (s[s.size()-1] != ')'))
     {
 
-
-       nestedParens(c+1);
-         return true;
+         return false;
   }
 
-   return false;
+   return nestedParens(s.substr(1, s.size() -2));
  }
